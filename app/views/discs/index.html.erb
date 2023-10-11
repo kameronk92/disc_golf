@@ -1,0 +1,6 @@
+<h1>Discs</h1>
+<% @discs.each do |disc| %>
+  <h3><%= disc.mold_name %></h3>
+  <p>does it hyzer? <%= disc.overstable %></p>
+  <p>Speed: <%= disc.speed %></p>
+<% end %>
