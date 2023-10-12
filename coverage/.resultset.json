@@ -225,7 +225,7 @@
           null,
           1,
           1,
-          null,
+          1,
           null,
           null
         ]
@@ -236,7 +236,7 @@
           null
         ]
       },
-      "/Users/kameron/turing_work/2mod/projects/disc_golf/app/models/disc.rb": {
+      "/Users/kameron/turing_work/2mod/projects/disc_golf/app/models/manufacturer.rb": {
         "lines": [
           1,
           null,
@@ -250,15 +250,11 @@
           null
         ]
       },
-      "/Users/kameron/turing_work/2mod/projects/disc_golf/app/controllers/discs_controller.rb": {
+      "/Users/kameron/turing_work/2mod/projects/disc_golf/app/controllers/manufacturers_controller.rb": {
         "lines": [
           1,
           1,
-          0,
-          null,
-          null,
           1,
-          null,
           null,
           null
         ]
@@ -270,6 +266,6 @@
         ]
       }
     },
-    "timestamp": 1697065161
+    "timestamp": 1697137226
   }
 }

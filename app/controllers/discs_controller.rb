@@ -4,6 +4,6 @@ class DiscsController < ApplicationController
   end
 
   def show
-    
+    @disc = Disc.find(params[:id])
   end
 end

@@ -1,0 +1,6 @@
+<a href="/manufacturers"> Manufactuer Index</a>
+
+<h1><%= @manufacturer.name %></h1>
+<p>
+<% if @manufacturer.is_american %> we're proudly based in the USA <% else %> we are excited to import to the USA <%end%></p>
+<p>we sponsor <%= @manufacturer.num_pros %> pro golfers</p>
