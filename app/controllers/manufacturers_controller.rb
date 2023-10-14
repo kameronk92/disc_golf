@@ -10,4 +10,5 @@ class ManufacturersController < ApplicationController
   def show_discs
     @manufacturer = Manufacturer.find(params[:id])
   end
+
 end
