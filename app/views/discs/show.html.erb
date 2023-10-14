@@ -1,0 +1,6 @@
+<a href="/discs"> Disc Index</a>
+
+<h1><%= @disc.mold_name %></h1>
+<p>does it hyzer? <%= @disc.overstable %></p>
+<p>Speed: <%= @disc.speed %></p>
+<p>Manufacturer: <%= Manufacturer.find(@disc.manufacturer_id).name %></p>
