@@ -22,7 +22,7 @@ RSpec.describe 'the manufacturers index page' do
 
   end
 
-  [ ] done
+  # [x] done
 
   # User Story 5, Parent Children Index 
 
