@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe 'the discs show page' do
   describe '#initialize' do 
-  #   [ ] done
+  #   [x] done
 
   # User Story 4, Child Show 
 
@@ -13,9 +13,10 @@ RSpec.describe 'the discs show page' do
   it 'displays the disc mold' do
       disc = Disc.create(manufacturer_id:1, mold_name:"Destroyer", overstable:true, speed:12)
       visit "/discs/#{disc.id}"
-      # expect().to eq()
-    end
 
-    it 'displays the disc speed' 
+  end
+
+  it 'displays the disc speed' 
+
   end
 end

@@ -39,4 +39,12 @@ RSpec.describe 'the manufacturers index page' do
   # When I visit the parent index,
   # I see that records are ordered by most recently created first
   # And next to each of the records I see when it was created
+
+# [ ] done
+
+# User Story 9, Parent Index Link
+
+# As a visitor
+# When I visit any page on the site
+# Then I see a link at the top of the page that takes me to the Parent Index
 end
