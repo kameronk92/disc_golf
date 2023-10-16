@@ -1,6 +1,6 @@
 class ManufacturersController < ApplicationController
   def index
-    @manufacturers = Manufacturer.order(created_at: :asc)
+    @manufacturers = Manufacturer.order(created_at: :desc)
   end
 
   def show
@@ -10,5 +10,4 @@ class ManufacturersController < ApplicationController
   def show_discs
     @manufacturer = Manufacturer.find(params[:id])
   end
-
 end
