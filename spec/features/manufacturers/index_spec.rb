@@ -79,4 +79,25 @@ RSpec.describe 'the manufacturers index page' do
     visit "/manufacturers/#{latitude_64.id}"
     expect(page).to have_link("Manufacturer Index", href: "/manufacturers")
   end
+
+  it 'allows creation of new parent pages' do
+    # [ ] done
+
+    # User Story 11, Parent Creation 
+
+    # As a visitor
+    # When I visit the Parent Index page
+    visit "/manufacturers"
+    # Then I see a link to create a new Parent record, "New Parent"
+    expect(page).to have_link("New Manufacturer", href: "/manufacturers/new")
+    # When I click this link
+    # Then I am taken to '/parents/new' where I  see a form for a new parent record
+    visit "/manufacturers/new"
+    expect(page).to have_content("Enter a new manufactuer:")
+    # When I fill out the form with a new parent's attributes:
+    # And I click the button "Create Parent" to submit the form
+    # Then a `POST` request is sent to the '/parents' route,
+    # a new parent record is created,
+    # and I am redirected to the Parent Index page where I see the new Parent displayed.
+  end
 end
