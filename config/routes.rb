@@ -16,6 +16,6 @@ Rails.application.routes.draw do
   get '/manufacturers/:id/discs', to: 'manufacturers#show_discs'
 
   get '/manufacturers/:id/edit', to: 'manufacturers#edit'
-  patch "/manufacturers", to: 'manufacturers#update'
+  patch "/manufacturers/:id", to: 'manufacturers#update'
 
 end

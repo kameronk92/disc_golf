@@ -1,13 +1,16 @@
-<form action='/manufacturers' method="patch">
+<form action="/manufacturers/<%= @manufacturer.id %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+
   <p>Edit manufactuer:</p>
+
   <label for ='name'>Manufacturer Name:</label>
-  <input type='text' name='name'/><br/>
+  <input type='text' name='manufacturer[name]' value="<%= @manufacturer.name %>"/><br/>
   
   <label for = 'is_american'> Check this box if manufactuer is American</label>
-  <input type='checkbox' name='is_american' value="true"/><br/>
+  <input type='checkbox' name='manufacturer[is_american]' <% if @manufacturer.is_american %> checked <% end %>/><br/>
 
   <label for = 'num_pros'> How many professionals do they sponsor?</label>
-  <input type='text' name='num_pros'/><br/>
-  <input type='submit'/>
+  <input type='text' name='manufacturer[num_pros]' value= <%= @manufacturer.num_pros %>><br/>
+  <input type='submit' value="Update"/>
 </form>

@@ -34,9 +34,9 @@ class ManufacturersController < ApplicationController
   def update
     manufacturer = Manufacturer.find(params[:id])
     manufacturer.update({
-      name: params[:manufactuer][:name],
-      is_american: params[:manufactuer][:is_american], 
-      num_pros: params[:manufactuer][:num_pros],
+      name: params[:manufacturer][:name],
+      is_american: params[:manufacturer][:is_american], 
+      num_pros: params[:manufacturer][:num_pros],
     })
 
     redirect_to "/manufacturers"
