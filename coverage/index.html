@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-10-16T09:07:20-06:00">2023-10-16T09:07:20-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-10-16T18:58:59-06:00">2023-10-16T18:58:59-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,7 +23,7 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  97.93%
+  97.32%
 </span>
 
      </span>
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>145</b> relevant lines,
-    <span class="green"><b>142</b> lines covered</span> and
-    <span class="red"><b>3</b> lines missed. </span>
+    <b>149</b> relevant lines,
+    <span class="green"><b>145</b> lines covered</span> and
+    <span class="red"><b>4</b> lines missed. </span>
     (<span class="green">
-  97.93%
+  97.32%
 </span>
 )
   </div>
@@ -94,12 +94,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#abf290e524734c94cf7d4caf8f59f9a434ec6f70" class="src_link" title="app/controllers/manufacturers_controller.rb">app/controllers/manufacturers_controller.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">75.00 %</td>
-            <td class="cell--number">27</td>
-            <td class="cell--number">12</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">1.42</td>
+            <td class="red strong cell--number t-file__coverage">71.43 %</td>
+            <td class="cell--number">31</td>
+            <td class="cell--number">14</td>
+            <td class="cell--number">10</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">1.36</td>
             
           </tr>
         
@@ -249,9 +249,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#42b361785595698d89fbc2853ebff4303b0712e8" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">8</td>
+            <td class="cell--number">17</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">9</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -271,9 +271,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#a27c94802ae054edb85e188238297fdff8c5230b" class="src_link" title="spec/features/manufacturers/index_spec.rb">spec/features/manufacturers/index_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">103</td>
-            <td class="cell--number">41</td>
-            <td class="cell--number">41</td>
+            <td class="cell--number">100</td>
+            <td class="cell--number">40</td>
+            <td class="cell--number">40</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -282,9 +282,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#57fa862f2e4234fc9c9fde663540d9862944dbed" class="src_link" title="spec/features/manufacturers/show_spec.rb">spec/features/manufacturers/show_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">64</td>
-            <td class="cell--number">21</td>
-            <td class="cell--number">21</td>
+            <td class="cell--number">67</td>
+            <td class="cell--number">23</td>
+            <td class="cell--number">23</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -495,7 +495,7 @@
     <h3>app/controllers/manufacturers_controller.rb</h3>
     <h4>
       <span class="red">
-  75.0%
+  71.43%
 </span>
 
       lines covered
@@ -504,9 +504,9 @@
     
 
     <div class="t-line-summary">
-      <b>12</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <b>14</b> relevant lines.
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
     </div>
 
     
@@ -627,8 +627,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="11">
-            <span class="hits">5</span>
+          <li class="covered" data-hits="6" data-linenumber="11">
+            <span class="hits">6</span>
             
 
             
@@ -804,6 +804,50 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="28">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def edit</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby">    @manufacturer = Manufacturer.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
             
             
 
@@ -3314,8 +3358,8 @@
     
 
     <div class="t-line-summary">
-      <b>8</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>9</b> relevant lines.
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3476,12 +3520,23 @@
 
             
 
+            <code class="ruby">  get &#39;/manufacturers/:id/edit&#39;, to: &#39;manufacturers#edit&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">  post &#39;/manufacturers&#39;, to: &#39;manufacturers#create&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
@@ -3492,7 +3547,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
@@ -3772,8 +3827,8 @@
     
 
     <div class="t-line-summary">
-      <b>41</b> relevant lines.
-      <span class="green"><b>41</b> lines covered</span> and
+      <b>40</b> relevant lines.
+      <span class="green"><b>40</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -4220,29 +4275,29 @@
 
             
 
-            <code class="ruby">    innova = Manufacturer.create(name: &quot;Innova&quot;, is_american: true, num_pros: 15)</code>
+            <code class="ruby">    innova = Manufacturer.create(name: &quot;Innova&quot;, is_american: true, num_pros: 15, created_at: &quot;2020-10-12&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="42">
+          <li class="covered" data-hits="1" data-linenumber="41">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    sleep 2 </code>
+            <code class="ruby">    discraft = Manufacturer.create(name: &quot;Discraft&quot;, is_american: true, num_pros: 10, created_at: &quot;2021-10-12&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="42">
+            
+            
+
+            
+
+            <code class="ruby">    #   [x] done</code>
           </li>
         </div>
       
@@ -4258,40 +4313,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="44">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    discraft = Manufacturer.create(name: &quot;Discraft&quot;, is_american: true, num_pros: 10)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="45">
-            
-            
-
-            
-
-            <code class="ruby">    #   [x] done</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="46">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="47">
+          <li class="never" data-hits="" data-linenumber="44">
             
             
 
@@ -4302,7 +4324,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
+          <li class="never" data-hits="" data-linenumber="45">
             
             
 
@@ -4313,7 +4335,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="49">
+          <li class="never" data-hits="" data-linenumber="46">
             
             
 
@@ -4324,7 +4346,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="50">
+          <li class="never" data-hits="" data-linenumber="47">
             
             
 
@@ -4335,7 +4357,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="51">
+          <li class="covered" data-hits="1" data-linenumber="48">
             <span class="hits">1</span>
             
 
@@ -4346,7 +4368,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="52">
+          <li class="never" data-hits="" data-linenumber="49">
             
             
 
@@ -4357,7 +4379,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="53">
+          <li class="covered" data-hits="1" data-linenumber="50">
             <span class="hits">1</span>
             
 
@@ -4368,7 +4390,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="54">
+          <li class="covered" data-hits="1" data-linenumber="51">
             <span class="hits">1</span>
             
 
@@ -4379,7 +4401,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="55">
+          <li class="never" data-hits="" data-linenumber="52">
             
             
 
@@ -4390,7 +4412,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="56">
+          <li class="never" data-hits="" data-linenumber="53">
             
             
 
@@ -4401,7 +4423,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="57">
+          <li class="never" data-hits="" data-linenumber="54">
             
             
 
@@ -4412,7 +4434,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="58">
+          <li class="never" data-hits="" data-linenumber="55">
             
             
 
@@ -4423,7 +4445,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="59">
+          <li class="covered" data-hits="1" data-linenumber="56">
             <span class="hits">1</span>
             
 
@@ -4434,7 +4456,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="60">
+          <li class="covered" data-hits="1" data-linenumber="57">
             <span class="hits">1</span>
             
 
@@ -4445,7 +4467,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="61">
+          <li class="covered" data-hits="1" data-linenumber="58">
             <span class="hits">1</span>
             
 
@@ -4456,7 +4478,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="62">
+          <li class="covered" data-hits="1" data-linenumber="59">
             <span class="hits">1</span>
             
 
@@ -4467,7 +4489,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="63">
+          <li class="never" data-hits="" data-linenumber="60">
             
             
 
@@ -4478,7 +4500,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="64">
+          <li class="never" data-hits="" data-linenumber="61">
             
             
 
@@ -4489,7 +4511,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="65">
+          <li class="never" data-hits="" data-linenumber="62">
             
             
 
@@ -4500,7 +4522,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="66">
+          <li class="never" data-hits="" data-linenumber="63">
             
             
 
@@ -4511,7 +4533,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="67">
+          <li class="never" data-hits="" data-linenumber="64">
             
             
 
@@ -4522,7 +4544,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="68">
+          <li class="never" data-hits="" data-linenumber="65">
             
             
 
@@ -4533,7 +4555,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="69">
+          <li class="never" data-hits="" data-linenumber="66">
             
             
 
@@ -4544,13 +4566,46 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="70">
+          <li class="covered" data-hits="1" data-linenumber="67">
             <span class="hits">1</span>
             
 
             
 
             <code class="ruby">    visit &quot;/discs&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="68">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_link(&quot;Manufacturer Index&quot;, href: &quot;/manufacturers&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="69">
+            
+            
+
+            
+
+            <code class="ruby">    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="70">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    visit &quot;/discs/#{river.id}&quot;</code>
           </li>
         </div>
       
@@ -4583,7 +4638,7 @@
 
             
 
-            <code class="ruby">    visit &quot;/discs/#{river.id}&quot;</code>
+            <code class="ruby">    visit &quot;/manufacturers&quot;</code>
           </li>
         </div>
       
@@ -4616,7 +4671,7 @@
 
             
 
-            <code class="ruby">    visit &quot;/manufacturers&quot;</code>
+            <code class="ruby">    visit &quot;/manufacturers/#{latitude_64.id}&quot;</code>
           </li>
         </div>
       
@@ -4638,18 +4693,18 @@
 
             
 
-            <code class="ruby">    </code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="79">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="79">
+            
             
 
             
 
-            <code class="ruby">    visit &quot;/manufacturers/#{latitude_64.id}&quot;</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4660,7 +4715,7 @@
 
             
 
-            <code class="ruby">    expect(page).to have_link(&quot;Manufacturer Index&quot;, href: &quot;/manufacturers&quot;)</code>
+            <code class="ruby">  it &#39;allows creation of new parent pages&#39; do</code>
           </li>
         </div>
       
@@ -4671,7 +4726,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    # [x] done</code>
           </li>
         </div>
       
@@ -4687,40 +4742,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="83">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  it &#39;allows creation of new parent pages&#39; do</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="84">
-            
-            
-
-            
-
-            <code class="ruby">    # [ ] done</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="85">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="86">
+          <li class="never" data-hits="" data-linenumber="83">
             
             
 
@@ -4731,7 +4753,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="87">
+          <li class="never" data-hits="" data-linenumber="84">
             
             
 
@@ -4742,7 +4764,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="88">
+          <li class="never" data-hits="" data-linenumber="85">
             
             
 
@@ -4753,7 +4775,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="89">
+          <li class="never" data-hits="" data-linenumber="86">
             
             
 
@@ -4764,7 +4786,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="90">
+          <li class="covered" data-hits="1" data-linenumber="87">
             <span class="hits">1</span>
             
 
@@ -4775,7 +4797,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="91">
+          <li class="never" data-hits="" data-linenumber="88">
             
             
 
@@ -4786,7 +4808,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="92">
+          <li class="covered" data-hits="1" data-linenumber="89">
             <span class="hits">1</span>
             
 
@@ -4797,7 +4819,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="93">
+          <li class="never" data-hits="" data-linenumber="90">
             
             
 
@@ -4808,7 +4830,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="94">
+          <li class="never" data-hits="" data-linenumber="91">
             
             
 
@@ -4819,7 +4841,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="95">
+          <li class="covered" data-hits="1" data-linenumber="92">
             <span class="hits">1</span>
             
 
@@ -4830,7 +4852,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="96">
+          <li class="covered" data-hits="1" data-linenumber="93">
             <span class="hits">1</span>
             
 
@@ -4841,7 +4863,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="97">
+          <li class="never" data-hits="" data-linenumber="94">
             
             
 
@@ -4852,7 +4874,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="98">
+          <li class="never" data-hits="" data-linenumber="95">
             
             
 
@@ -4863,7 +4885,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="99">
+          <li class="never" data-hits="" data-linenumber="96">
             
             
 
@@ -4874,7 +4896,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="100">
+          <li class="never" data-hits="" data-linenumber="97">
             
             
 
@@ -4885,7 +4907,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="101">
+          <li class="never" data-hits="" data-linenumber="98">
             
             
 
@@ -4896,7 +4918,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="102">
+          <li class="never" data-hits="" data-linenumber="99">
             
             
 
@@ -4907,7 +4929,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="103">
+          <li class="never" data-hits="" data-linenumber="100">
             
             
 
@@ -4936,8 +4958,8 @@
     
 
     <div class="t-line-summary">
-      <b>21</b> relevant lines.
-      <span class="green"><b>21</b> lines covered</span> and
+      <b>23</b> relevant lines.
+      <span class="green"><b>23</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -5510,13 +5532,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="52">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="52">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">    latitude_64 = Manufacturer.create(name: &quot;Latitude 64&quot;, is_american: false, num_pros: 17)</code>
           </li>
         </div>
       
@@ -5543,13 +5565,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="55">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="55">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    # Then I see a link to update the parent &quot;Update Parent&quot;</code>
+            
+
+            <code class="ruby">    visit &quot;/manufacturers/#{latitude_64.id}&quot;</code>
           </li>
         </div>
       
@@ -5560,7 +5582,7 @@
 
             
 
-            <code class="ruby">    # When I click the link &quot;Update Parent&quot;</code>
+            <code class="ruby">    # Then I see a link to update the parent &quot;Update Parent&quot;</code>
           </li>
         </div>
       
@@ -5571,7 +5593,7 @@
 
             
 
-            <code class="ruby">    # Then I am taken to &#39;/parents/:id/edit&#39; where I  see a form to edit the parent&#39;s attributes:</code>
+            <code class="ruby">    </code>
           </li>
         </div>
       
@@ -5582,7 +5604,7 @@
 
             
 
-            <code class="ruby">    # When I fill out the form with updated information</code>
+            <code class="ruby">    # When I click the link &quot;Update Parent&quot;</code>
           </li>
         </div>
       
@@ -5593,7 +5615,7 @@
 
             
 
-            <code class="ruby">    # And I click the button to submit the form</code>
+            <code class="ruby">    # expect(page).to have_link(&quot;Update Manufacturer&quot;, href: &quot;/manufacturers/#{</code>
           </li>
         </div>
       
@@ -5604,7 +5626,7 @@
 
             
 
-            <code class="ruby">    # Then a `PATCH` request is sent to &#39;/parents/:id&#39;,</code>
+            <code class="ruby">    # Then I am taken to &#39;/parents/:id/edit&#39; where I  see a form to edit the parent&#39;s attributes:</code>
           </li>
         </div>
       
@@ -5615,7 +5637,7 @@
 
             
 
-            <code class="ruby">    # the parent&#39;s info is updated,</code>
+            <code class="ruby">    # When I fill out the form with updated information</code>
           </li>
         </div>
       
@@ -5626,7 +5648,7 @@
 
             
 
-            <code class="ruby">    # and I am redirected to the Parent&#39;s Show page where I see the parent&#39;s updated info</code>
+            <code class="ruby">    # And I click the button to submit the form</code>
           </li>
         </div>
       
@@ -5637,12 +5659,45 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    # Then a `PATCH` request is sent to &#39;/parents/:id&#39;,</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="64">
+            
+            
+
+            
+
+            <code class="ruby">    # the parent&#39;s info is updated,</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="65">
+            
+            
+
+            
+
+            <code class="ruby">    # and I am redirected to the Parent&#39;s Show page where I see the parent&#39;s updated info</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="66">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="67">
             
             
 

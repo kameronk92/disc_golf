@@ -17,11 +17,28 @@ class ManufacturersController < ApplicationController
 
   def create
     manufacturer = Manufacturer.new({
-      name: params[:name],
+      name: params[:name], 
+      is_american: params[:is_american], 
+      num_pros: params[:num_pros],
     })
 
     manufacturer.save
 
     redirect_to '/manufacturers'
+  end
+
+  def edit
+    @manufacturer = Manufacturer.find(params[:id])
+  end
+
+  def update
+    manufacturer = Manufacturer.find(params[:id])
+    manufacturer.update({
+      name: params[:manufactuer][:name],
+      is_american: params[:manufactuer][:is_american], 
+      num_pros: params[:manufactuer][:num_pros],
+    })
+
+    redirect_to "/manufacturers"
   end
 end

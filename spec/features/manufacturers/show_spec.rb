@@ -49,11 +49,14 @@ RSpec.describe 'manufacturer show page' do
     #   [ ] done
 
     # User Story 12, Parent Update 
-
+    latitude_64 = Manufacturer.create(name: "Latitude 64", is_american: false, num_pros: 17)
     # As a visitor
     # When I visit a parent show page
+    visit "/manufacturers/#{latitude_64.id}"
     # Then I see a link to update the parent "Update Parent"
+    
     # When I click the link "Update Parent"
+    # expect(page).to have_link("Update Manufacturer", href: "/manufacturers/#{
     # Then I am taken to '/parents/:id/edit' where I  see a form to edit the parent's attributes:
     # When I fill out the form with updated information
     # And I click the button to submit the form

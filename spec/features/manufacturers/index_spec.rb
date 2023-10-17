@@ -37,11 +37,8 @@ RSpec.describe 'the manufacturers index page' do
   end
 
   it "shows parents in order from most recent" do
-    innova = Manufacturer.create(name: "Innova", is_american: true, num_pros: 15)
-
-    sleep 2 
-
-    discraft = Manufacturer.create(name: "Discraft", is_american: true, num_pros: 10)
+    innova = Manufacturer.create(name: "Innova", is_american: true, num_pros: 15, created_at: "2020-10-12")
+    discraft = Manufacturer.create(name: "Discraft", is_american: true, num_pros: 10, created_at: "2021-10-12")
     #   [x] done
 
     # User Story 6, Parent Index sorted by Most Recently Created 
@@ -81,7 +78,7 @@ RSpec.describe 'the manufacturers index page' do
   end
 
   it 'allows creation of new parent pages' do
-    # [ ] done
+    # [x] done
 
     # User Story 11, Parent Creation 
 
