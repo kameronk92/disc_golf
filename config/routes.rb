@@ -24,4 +24,7 @@ Rails.application.routes.draw do
   get '/manufacturers/:id/discs/new', to: 'discs#new'
   post '/manufacturers/:id/discs', to: 'discs#create'
 
+  delete 'manufacturers/:id', to: 'manufacturers#destroy'
+  delete 'discs/:id', to: 'discs#destroy'
+
 end

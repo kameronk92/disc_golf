@@ -6,3 +6,9 @@
 <p>does it hyzer? <%= @disc.overstable %></p>
 <p>Speed: <%= @disc.speed %></p>
 <p>Manufacturer: <%= Manufacturer.find(@disc.manufacturer_id).name %></p>
+
+<form action="/discs/<%= @disc.id %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="delete"/>
+</form>

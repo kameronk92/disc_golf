@@ -42,4 +42,12 @@ class ManufacturersController < ApplicationController
 
     redirect_to "/manufacturers"
   end
+
+  def destroy
+    @manufacturer = Manufacturer.find(params[:id])
+    @manufacturer.discs.destroy_all
+    @manufacturer.destroy
+    
+    redirect_to '/manufacturers'
+  end
 end
