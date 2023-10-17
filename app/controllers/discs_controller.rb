@@ -45,4 +45,6 @@ class DiscsController < ApplicationController
 
     redirect_to "/discs"
   end
+
+  
 end
