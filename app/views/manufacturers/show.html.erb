@@ -1,4 +1,4 @@
-<a href="/manufacturers"> Manufactuer Index</a>
+<a href="/manufacturers"> Manufacturer Index</a>
 <a href="/discs"> Disc Index</a>
 
 <h1><%= @manufacturer.name %></h1>
@@ -6,3 +6,4 @@
 <% if @manufacturer.is_american %> we're proudly based in the USA <% else %> we are excited to import to the USA <%end%></p>
 <p>we sponsor <%= @manufacturer.num_pros %> pro golfers</p>
 <p>Number of discs: <%=@manufacturer.discs.count%></p>
+<p>See a list of our discs <a href="/manufacturers/<%=@manufacturer.id%>/discs"> here</a>
