@@ -1,7 +1,8 @@
 <h1>manufactuers</h1>
-<a href="/manufacturers"> Manufactuer Index</a>
-<a href="/discs"> Disc Index</a>
-
+<p><a href="/manufacturers"> Manufacturer Index</a></p>
+<p><a href="/discs"> Disc Index</a></p>
 <% @manufacturers.each do |m| %>
 <h3><%= m.name %>, created at <%= m.created_at %></h3>
 <% end %>
+
+<p><a href="/manufacturers/new"> New Manufacturer</a></p>

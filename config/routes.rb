@@ -6,9 +6,11 @@ Rails.application.routes.draw do
 
   get '/discs', to: 'discs#index'
   get '/discs/:id', to: 'discs#show'
+  
   get '/manufacturers', to: 'manufacturers#index'
+  get 'manufacturers/new', to: 'manufacturers#new'
   get '/manufacturers/:id', to: 'manufacturers#show'
   get '/manufacturers/:id/discs', to: 'manufacturers#show_discs'
-
+  post '/manufacturers', to: 'manufacturers#create'
 
 end
