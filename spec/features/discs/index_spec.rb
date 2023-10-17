@@ -3,8 +3,8 @@ require "rails_helper"
 RSpec.describe "discs index page" do
   it "shows all discs in the database" do
     latitude_64 = Manufacturer.create(name: "Latitude 64", is_american: false, num_pros: 17)
-    river = Disc.create(mold_name: "River", overstable: false, speed: 7, manufacturer_id: latitude_64.id)
-    fuse = Disc.create(mold_name: "Fuse", overstable: false, speed: 5, manufacturer_id: latitude_64.id)
+    river = Disc.create(mold_name: "River", overstable: true, speed: 7, manufacturer_id: latitude_64.id)
+    fuse = Disc.create(mold_name: "Fuse", overstable: true, speed: 5, manufacturer_id: latitude_64.id)
     # [x] done
 
     # User Story 3, Child Index 
@@ -23,8 +23,8 @@ RSpec.describe "discs index page" do
 
   it "includes a link to the child index" do
     latitude_64 = Manufacturer.create(name: "Latitude 64", is_american: false, num_pros: 17)
-    river = Disc.create(mold_name: "River", overstable: false, speed: 7, manufacturer_id: latitude_64.id)
-    fuse = Disc.create(mold_name: "Fuse", overstable: false, speed: 5, manufacturer_id: latitude_64.id)
+    river = Disc.create(mold_name: "River", overstable: true, speed: 7, manufacturer_id: latitude_64.id)
+    fuse = Disc.create(mold_name: "Fuse", overstable: true, speed: 5, manufacturer_id: latitude_64.id)
     # [x] done
 
     # User Story 8, Child Index Link
@@ -40,5 +40,17 @@ RSpec.describe "discs index page" do
     expect(page).to have_link("Disc Index", href: "/discs")
     visit "/manufacturers/#{latitude_64.id}"
     expect(page).to have_link("Disc Index", href: "/discs")
+  end
+
+  it "only shows records with true booleans" do
+    #     [x] done
+
+    # User Story 15, Child Index only shows `true` Records 
+
+    # As a visitor
+    # When I visit the child index
+    # Then I only see records where the boolean column is `true`
+    visit "/discs"
+    expect(page).not_to have_content("false")
   end
 end
