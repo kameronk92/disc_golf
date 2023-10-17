@@ -13,6 +13,7 @@ class ManufacturersController < ApplicationController
 
   def show_discs
     @manufacturer = Manufacturer.find(params[:id])
+    @discs = @manufacturer.discs.order(:mold_name)
   end
 
   def create

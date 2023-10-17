@@ -3,6 +3,8 @@
 <p><a href="/discs"> Disc Index</a></p>
 <% @manufacturers.each do |m| %>
 <h3><%= m.name %>, created at <%= m.created_at %></h3>
+<a href="/manufacturers/<%=m.id%>/edit"> edit manufacturer</a>
 <% end %>
+
 
 <p><a href="/manufacturers/new"> New Manufacturer</a></p>
