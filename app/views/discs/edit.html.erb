@@ -1,0 +1,16 @@
+<form action="/discs/<%= @disc.id %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+
+  <p>Edit disc:</p>
+
+  <label for ='mold_name'>Disc Name:</label>
+  <input type='text' name='disc[mold_name]' value="<%= @disc.mold_name %>"/><br/>
+  
+  <label for = 'overstable'> Check this box if disc is overstable</label>
+  <input type='checkbox' name='disc[overstable]' <% if @disc.overstable %> checked <% end %>/><br/>
+
+  <label for = 'speed'> What is the speed stat?</label>
+  <input type='text' name='disc[speed]' value= <%= @disc.speed %>><br/>
+  <input type='submit' value="Update"/>
+</form>

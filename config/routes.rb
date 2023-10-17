@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   get '/discs', to: 'discs#index'
   get '/discs/:id', to: 'discs#show'
+
+  get '/discs/:id/edit', to: 'discs#edit'
+  patch '/discs/:id', to: 'discs#update'
   
   get '/manufacturers', to: 'manufacturers#index'
 
@@ -19,6 +22,6 @@ Rails.application.routes.draw do
   patch "/manufacturers/:id", to: 'manufacturers#update'
 
   get '/manufacturers/:id/discs/new', to: 'discs#new'
-  post 'manufacturers/:id/discs', to: 'discs#create'
+  post '/manufacturers/:id/discs', to: 'discs#create'
 
 end
