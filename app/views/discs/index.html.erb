@@ -1,11 +1,15 @@
 <h1>Discs</h1>
 <a href="/manufacturers"> Manufacturer Index</a>
 <a href="/discs"> Disc Index</a>
-<a href="/manufacturers"> Manufactuer Index</a>
 
 <% @discs.each do |disc| %>
   <h3><%= disc.mold_name %></h3>
   <p>does it hyzer? <%= disc.overstable %></p>
   <p>Speed: <%= disc.speed %></p>
   <a href="/discs/<%=disc.id%>/edit"> edit disc here</a>
+  <form action="/discs/<%= disc.id %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="delete"/>
+</form>
 <% end %>

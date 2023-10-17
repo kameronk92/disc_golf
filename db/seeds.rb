@@ -17,7 +17,7 @@ sleep 2
 latitude_64 = Manufacturer.create(name: "Latitude 64", is_american: false, num_pros: 17)
 
 river = Disc.create(mold_name: "River", overstable: false, speed: 7, manufacturer_id: 3)
-fuse = Disc.create(mold_name: "Fuse", overstable: false, speed: 5, manufacturer_id: 3)
+fuse = Disc.create(mold_name: "Anchor", overstable: true, speed: 5, manufacturer_id: 3)
 bolt = Disc.create(mold_name: "Bolt", overstable: false, speed: 12, manufacturer_id: 3)
 
 destroyer = Disc.create(manufacturer_id:1, mold_name:"Destroyer", overstable:true, speed:12)
