@@ -1,0 +1,16 @@
+<form action="/manufacturers/<%= @manufacturer.id %>/discs" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>Enter a new disc:</p>
+  <label for ='manufacturer_id'>Manufacturer ID:</label>
+  <input type='text' name='manufacturer_id' value="<%= @manufacturer.id %>"><br/>
+  
+  <label for ='mold_name'>Mold Name:</label>
+  <input type='text' name='mold_name' value="mold name here"/><br/>
+  
+  <label for ='overstable'> Check this box if the disc is overstable</label>
+  <input type='checkbox' name='overstable' value="true"/><br/>
+
+  <label for ='speed'> What is the disc speed stat?</label>
+  <input type='text' name='speed'/><br/>
+  <input type='submit'/>
+</form>
