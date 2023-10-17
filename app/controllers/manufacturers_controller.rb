@@ -14,6 +14,12 @@ class ManufacturersController < ApplicationController
   def show_discs
     @manufacturer = Manufacturer.find(params[:id])
     @discs = @manufacturer.discs.order(:mold_name)
+
+    if params[:speed].present?
+
+      @discs = @discs.where("speed >= ?", params[:speed].to_i)
+
+    end
   end
 
   def create
