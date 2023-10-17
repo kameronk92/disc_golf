@@ -45,8 +45,8 @@ RSpec.describe 'manufacturer show page' do
     expect(page).to have_link("here", href: "/manufacturers/#{latitude_64.id}/discs")
   end
 
-  it 'can update parent name' do
-    #   [ ] done
+  it 'can update parent attributes' do
+    #   [x] done
 
     # User Story 12, Parent Update 
     latitude_64 = Manufacturer.create(name: "Latitude 64", is_american: false, num_pros: 17)
@@ -54,11 +54,13 @@ RSpec.describe 'manufacturer show page' do
     # When I visit a parent show page
     visit "/manufacturers/#{latitude_64.id}"
     # Then I see a link to update the parent "Update Parent"
-    
     # When I click the link "Update Parent"
     # expect(page).to have_link("Update Manufacturer", href: "/manufacturers/#{
+    expect(page).to have_link("here", href: "/manufacturers/#{latitude_64.id}/edit")
     # Then I am taken to '/parents/:id/edit' where I  see a form to edit the parent's attributes:
-    # When I fill out the form with updated information
+    visit "/manufacturers/#{latitude_64.id}/edit"
+    expect(page).to have_content('How many professionals do they sponsor?')
+    # When I fill out the form with updated information'
     # And I click the button to submit the form
     # Then a `PATCH` request is sent to '/parents/:id',
     # the parent's info is updated,
