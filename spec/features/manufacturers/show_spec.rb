@@ -66,4 +66,50 @@ RSpec.describe 'manufacturer show page' do
     # the parent's info is updated,
     # and I am redirected to the Parent's Show page where I see the parent's updated info
   end
+
+  it 'can sort children alphabetically' do
+    #     [x] done
+
+    # User Story 16, Sort Parent's Children in Alphabetical Order by name 
+    latitude_64 = Manufacturer.create(name: "Latitude 64", is_american: false, num_pros: 17)
+    river = Disc.create(mold_name: "River", overstable: false, speed: 7, manufacturer_id: latitude_64.id)
+    fuse = Disc.create(mold_name: "Fuse", overstable: false, speed: 5, manufacturer_id: latitude_64.id)
+    # As a visitor
+    # When I visit the Parent's children Index Page
+    visit "/manufacturers/#{latitude_64.id}/discs"
+    # Then I see a link to sort children in alphabetical order
+    # When I click on the link
+    expect("Fuse").to appear_before("River")
+    # I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order
+  end
+
+  it 'can delete parents' do
+    #     [x] done
+
+    # User Story 19, Parent Delete 
+    latitude_64 = Manufacturer.create(name: "Latitude 64", is_american: false, num_pros: 17)
+    river = Disc.create(mold_name: "River", overstable: false, speed: 7, manufacturer_id: latitude_64.id)
+    fuse = Disc.create(mold_name: "Fuse", overstable: false, speed: 5, manufacturer_id: latitude_64.id)
+    # As a visitor
+    # When I visit a parent show page
+    visit "/manufacturers/#{latitude_64.id}"
+    # Then I see a link to delete the parent
+   
+    # When I click the link "Delete Parent"
+    # Then a 'DELETE' request is sent to '/parents/:id',
+    # the parent is deleted, and all child records are deleted
+    # and I am redirected to the parent index page where I no longer see this parent
+  end
+
+  it 'can filter children by speed' do
+    #     [x] done
+
+    # User Story 21, Display Records Over a Given Threshold 
+
+    # As a visitor
+    # When I visit the Parent's children Index Page
+    # I see a form that allows me to input a number value
+    # When I input a number value and click the submit button that reads 'Only return records with more than `number` of `column_name`'
+    # Then I am brought back to the current index page with only the records that meet that threshold shown.
+  end
 end

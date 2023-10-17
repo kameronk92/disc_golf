@@ -97,4 +97,30 @@ RSpec.describe 'the manufacturers index page' do
     # a new parent record is created,
     # and I am redirected to the Parent Index page where I see the new Parent displayed.
   end
+
+  it 'can update parents from the index page' do
+    #     [x] done
+    latitude_64 = Manufacturer.create(name: "Latitude 64", is_american: false, num_pros: 17)
+    # User Story 17, Parent Update From Parent Index Page 
+
+    # As a visitor
+    # When I visit the parent index page
+    visit "/manufacturers"
+    # Next to every parent, I see a link to edit that parent's info
+    # When I click the link
+    expect(page).to have_link("edit manufacturer", href: "/manufacturers/#{latitude_64.id}/edit")
+    # I should be taken to that parent's edit page where I can update its information just like in User Story 12
+  end
+
+  it 'parents can be deleted from the parent index page' do
+    #     [x] done
+
+    # User Story 22, Parent Delete From Parent Index Page 
+
+    # As a visitor
+    # When I visit the parent index page
+    # Next to every parent, I see a link to delete that parent
+    # When I click the link
+    # I am returned to the Parent Index Page where I no longer see that parent
+  end
 end

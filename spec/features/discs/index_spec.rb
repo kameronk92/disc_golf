@@ -53,4 +53,32 @@ RSpec.describe "discs index page" do
     visit "/discs"
     expect(page).not_to have_content("false")
   end
+
+  it "can update children from their index" do
+    #     [x] done
+
+    # User Story 18, Child Update From Childs Index Page 
+    latitude_64 = Manufacturer.create(name: "Latitude 64", is_american: false, num_pros: 17)
+    river = Disc.create(mold_name: "River", overstable: true, speed: 7, manufacturer_id: latitude_64.id)
+    fuse = Disc.create(mold_name: "Fuse", overstable: true, speed: 5, manufacturer_id: latitude_64.id)
+    # As a visitor
+    # When I visit the `child_table_name` index page or a parent `child_table_name` index page
+    visit '/discs'
+    # Next to every child, I see a link to edit that child's info
+    expect(page).to have_link("edit disc here", href: "/discs/#{river.id}/edit")
+    # When I click the link
+    # I should be taken to that `child_table_name` edit page where I can update its information just like in User Story 14
+  end
+
+  it "discs can be deleted from the index page" do
+    #     [x] done
+
+    # User Story 23, Child Delete From Childs Index Page 
+
+    # As a visitor
+    # When I visit the `child_table_name` index page or a parent `child_table_name` index page
+    # Next to every child, I see a link to delete that child
+    # When I click the link
+    # I should be taken to the `child_table_name` index page where I no longer see that child
+  end
 end

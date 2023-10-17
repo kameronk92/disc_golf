@@ -17,4 +17,18 @@ RSpec.describe 'the discs show page' do
     expect(page).to have_content(disc.speed)
     # (data from each column that is on the child table)
   end
+
+  it 'has a delete button' do
+    #     [x] done
+
+    # User Story 20, Child Delete 
+
+    # As a visitor
+    # When I visit a child show page
+    # Then I see a link to delete the child "Delete Child"
+    # When I click the link
+    # Then a 'DELETE' request is sent to '/child_table_name/:id',
+    # the child is deleted,
+    # and I am redirected to the child index page where I no longer see this child
+  end
 end
