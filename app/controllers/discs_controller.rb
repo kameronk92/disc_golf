@@ -39,4 +39,10 @@ class DiscsController < ApplicationController
 
     redirect_to "/discs/#{disc.id}"
   end
+
+  def destroy
+    Disc.destroy(params[:id])
+
+    redirect_to "/discs"
+  end
 end

@@ -7,4 +7,10 @@
 <p>we sponsor <%= @manufacturer.num_pros %> pro golfers</p>
 <p>Number of discs: <%=@manufacturer.discs.count%></p>
 <p>See a list of our discs <a href="/manufacturers/<%=@manufacturer.id%>/discs"> here</a>
-<p>Edit <a href="/manufacturers/<%=@manufacturer.id%>/edit"> here</a>
+<p> <a href="/manufacturers/<%=@manufacturer.id%>/edit"> Edit here</a>
+
+<form action="/manufacturers/<%= @manufacturer.id %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="delete"/>
+</form>
