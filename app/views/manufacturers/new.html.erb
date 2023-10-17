@@ -1,7 +1,13 @@
 <form action="/manufacturers" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <p>Enter a new manufactuer:</p>
+  <label for ='name'>Manufacturer Name:</label>
   <input type='text' name='name'/><br/>
-  <textarea name='description'></textarea><br/>
+  
+  <label for = 'is_american'> Check this box if manufactuer is American</label>
+  <input type='checkbox' name='is_american' value="true"/><br/>
+
+  <label for = 'num_pros'> How many professionals do they sponsor?</label>
+  <input type='text' name='num_pros'/><br/>
   <input type='submit'/>
 </form>
